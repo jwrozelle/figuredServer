@@ -3,3 +3,17 @@
 .RData
 .Ruserdata
 .Renviron
+dhs_app/appv1.R
+dhs_app/appv2.R
+dhs_app/app_old.R
+lmh_map/mapback.R
+lmh_map/community.rds
+lmh_map/appv1.R
+lmh_map/appv2.R
+lmh_map/appv2_1.R
+lmh_map/appv3.R
+*.Rproj
+sampling_app/appv1.R
+sampling_app/appv2.R
+sampling_app/appv3.R
+lmh_map/Robjects/*.rds
