@@ -1,0 +1,67 @@
+"OBJECTID","ID_0","ISO","NAME_0","ID_1","NAME_1","ID_2","NAME_2","TYPE_2","ENGTYPE_2","NL_NAME_2","VARNAME_2"
+1,127,"LBR","Liberia",1,"Bomi",1,"Klay","District","District",NA,NA
+2,127,"LBR","Liberia",1,"Bomi",2,"Mecca","District","District",NA,NA
+3,127,"LBR","Liberia",2,"Bong",3,"Fuamah","District","District",NA,NA
+4,127,"LBR","Liberia",2,"Bong",4,"Jorquelleh","District","District",NA,NA
+5,127,"LBR","Liberia",2,"Bong",5,"Kokoyah","District","District",NA,NA
+6,127,"LBR","Liberia",2,"Bong",6,"Panta-Kpa","District","District",NA,NA
+7,127,"LBR","Liberia",2,"Bong",7,"Salala","District","District",NA,NA
+8,127,"LBR","Liberia",2,"Bong",8,"Sanayea","District","District",NA,NA
+9,127,"LBR","Liberia",2,"Bong",9,"Suakoko","District","District",NA,NA
+10,127,"LBR","Liberia",2,"Bong",10,"Zota","District","District",NA,NA
+11,127,"LBR","Liberia",3,"Gbapolu",11,"Belleh","District","District",NA,NA
+12,127,"LBR","Liberia",3,"Gbapolu",12,"Bokomu","District","District",NA,NA
+13,127,"LBR","Liberia",3,"Gbapolu",13,"Bopolu","District","District",NA,NA
+14,127,"LBR","Liberia",3,"Gbapolu",14,"Gbarma","District","District",NA,NA
+15,127,"LBR","Liberia",3,"Gbapolu",15,"Kongba","District","District",NA,NA
+16,127,"LBR","Liberia",4,"Grand Cape Mount",16,"Commnwealth","District","District",NA,NA
+17,127,"LBR","Liberia",4,"Grand Cape Mount",17,"Garwula","District","District",NA,NA
+18,127,"LBR","Liberia",4,"Grand Cape Mount",18,"Golakonneh","District","District",NA,NA
+19,127,"LBR","Liberia",4,"Grand Cape Mount",19,"Porkpa","District","District",NA,NA
+20,127,"LBR","Liberia",4,"Grand Cape Mount",20,"Tewor","District","District",NA,NA
+21,127,"LBR","Liberia",5,"GrandBassa",21,"District # 1","District","District",NA,NA
+22,127,"LBR","Liberia",5,"GrandBassa",22,"District # 2","District","District",NA,NA
+23,127,"LBR","Liberia",5,"GrandBassa",23,"District # 3","District","District",NA,NA
+24,127,"LBR","Liberia",5,"GrandBassa",24,"District # 4","District","District",NA,NA
+25,127,"LBR","Liberia",5,"GrandBassa",25,"Owensgrove","District","District",NA,NA
+26,127,"LBR","Liberia",5,"GrandBassa",26,"Stjohnriver","District","District",NA,NA
+27,127,"LBR","Liberia",6,"GrandGedeh",27,"Gbarzon","District","District",NA,NA
+28,127,"LBR","Liberia",6,"GrandGedeh",28,"Konobo","District","District",NA,NA
+29,127,"LBR","Liberia",6,"GrandGedeh",29,"Tchien","District","District",NA,NA
+30,127,"LBR","Liberia",7,"GrandKru",30,"Buah","District","District",NA,NA
+31,127,"LBR","Liberia",7,"GrandKru",31,"Lower Kru Coast","District","District",NA,NA
+32,127,"LBR","Liberia",7,"GrandKru",32,"Sasstown 180606","District","District",NA,NA
+33,127,"LBR","Liberia",7,"GrandKru",33,"Upperkrucoast","District","District",NA,NA
+34,127,"LBR","Liberia",8,"Lofa",34,"Foya","District","District",NA,NA
+35,127,"LBR","Liberia",8,"Lofa",35,"Kolahun","District","District",NA,NA
+36,127,"LBR","Liberia",8,"Lofa",36,"Lower Kru Coast","District","District",NA,NA
+37,127,"LBR","Liberia",8,"Lofa",37,"Salayea","District","District",NA,NA
+38,127,"LBR","Liberia",8,"Lofa",38,"Voinjama","District","District",NA,NA
+39,127,"LBR","Liberia",8,"Lofa",39,"Zorzor","District","District",NA,NA
+40,127,"LBR","Liberia",9,"Margibi",40,"Firestone","District","District",NA,NA
+41,127,"LBR","Liberia",9,"Margibi",41,"Gibi","District","District",NA,NA
+42,127,"LBR","Liberia",9,"Margibi",42,"Kakata","District","District",NA,NA
+43,127,"LBR","Liberia",9,"Margibi",43,"Mambah-Kaba","District","District",NA,NA
+44,127,"LBR","Liberia",10,"Maryland",44,"Barrobo","District","District",NA,NA
+45,127,"LBR","Liberia",10,"Maryland",45,"Pleebo/Sodeken","District","District",NA,NA
+46,127,"LBR","Liberia",11,"Montserrado",46,"Careysburg","District","District",NA,NA
+47,127,"LBR","Liberia",11,"Montserrado",47,"Greater Monrovia","District","District",NA,NA
+48,127,"LBR","Liberia",11,"Montserrado",48,"St Paul River","District","District",NA,NA
+49,127,"LBR","Liberia",11,"Montserrado",49,"Todee","District","District",NA,NA
+50,127,"LBR","Liberia",12,"Nimba",50,"Gbehlageh","District","District",NA,NA
+51,127,"LBR","Liberia",12,"Nimba",51,"Saclepea","District","District",NA,NA
+52,127,"LBR","Liberia",12,"Nimba",52,"Sanniquelleh-Mahn","District","District",NA,NA
+53,127,"LBR","Liberia",12,"Nimba",53,"Tappita","District","District",NA,NA
+54,127,"LBR","Liberia",12,"Nimba",54,"Yarwein-Mehnsohnne","District","District",NA,NA
+55,127,"LBR","Liberia",12,"Nimba",55,"Zoegeh","District","District",NA,NA
+56,127,"LBR","Liberia",13,"River Cess",56,"Morweh","District","District",NA,NA
+57,127,"LBR","Liberia",13,"River Cess",57,"Timbo","District","District",NA,NA
+58,127,"LBR","Liberia",14,"River Gee",58,"Gbeapo","District","District",NA,NA
+59,127,"LBR","Liberia",14,"River Gee",59,"Webbo","District","District",NA,NA
+60,127,"LBR","Liberia",15,"Sinoe",60,"Butaw","District","District",NA,NA
+61,127,"LBR","Liberia",15,"Sinoe",61,"Dugbe River","District","District",NA,NA
+62,127,"LBR","Liberia",15,"Sinoe",62,"Greenville","District","District",NA,NA
+63,127,"LBR","Liberia",15,"Sinoe",63,"Jaedae Jaedepo","District","District",NA,NA
+64,127,"LBR","Liberia",15,"Sinoe",64,"Juarzon","District","District",NA,NA
+65,127,"LBR","Liberia",15,"Sinoe",65,"Kpayan","District","District",NA,NA
+66,127,"LBR","Liberia",15,"Sinoe",66,"Pyneston","District","District",NA,NA
