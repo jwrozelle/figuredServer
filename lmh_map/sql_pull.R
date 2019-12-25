@@ -15,21 +15,26 @@ killDbConnections <- function () {
 }
 killDbConnections()
 
+lmh_user <- Sys.getenv("lmh_user")
+lmh_host <- Sys.getenv("lmh_host")
+lmh_port <- as.integer(Sys.getenv("lmh_port"))
+lmh_pwd  <- Sys.getenv("lmh_pwd")
+
 cha.con <- DBI::dbConnect(
   MySQL(),
-  user = 'lastmile_admin',
-  host = "166.62.33.107",
-  port = 3306,
-  password = "LastMile14",
+  user = lmh_user,
+  host = lmh_host,
+  port = lmh_port,
+  password = lmh_pwd,
   dbname = "lastmile_cha"
 )
 
 upload.con <-DBI::dbConnect(
   MySQL(),
-  user = 'lastmile_admin',
-  host = "166.62.33.107",
-  port = 3306,
-  password = "LastMile14",
+  user = lmh_user,
+  host = lmh_host,
+  port = lmh_port,
+  password = lmh_pwd,
   dbname = "lastmile_upload"
 )
 

@@ -4,21 +4,21 @@ library(openxlsx)
 library(dplyr)
 library(shinythemes)
 
+
 # Define UI for data upload app ----
 ui <- fluidPage(
   theme = shinytheme("yeti"),
   tags$head(
     
-    HTML(
-      "<!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src='https://www.googletagmanager.com/gtag/js?id=UA-129297024-1'></script>
-      <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'UA-129297024-1');
-      </script>")),
+    HTML("<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-129297024-1'></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-129297024-1');
+    </script>")),
   tags$a(href = "https://figured.io", tags$img(src = "https://figured.io/aux/logo1.png", width = 137, height = 50, padding = "20px")),
   tags$hr(),
   
@@ -47,7 +47,7 @@ ui <- fluidPage(
       tags$h3("About Codebook.R"),
       tags$p("I create a lot of surveys in ODK, and usually do so by creating the form first in excel, and then uploading to a kobo server or ONA. I often, then, later have a need to create a single document with a codebook. There were often times I used the Nafundi and Task Force created ", tags$a(href = "https://opendatakit.org/2013/06/task-force-and-nafundi-release-codebook-generator-for-odk/", "LINKS Codebook Generator"), ". However, I found that was often insufficient for my needs. This was for several reasons. More sophisticated calculations, like `pulldata()`, broke it. Additionally, I couldn't seek skip patterns or calculations. Finally - it output into pdf format, which made edits or rearranging more challenging."),
       tags$p("Since I always start my XFORMS in Excel, it made sense to simply create an app that would take an xls form and turn it into a single sheet codebook. So, I wrote a few lines of R code and made this!"),
-      tags$p("This is a simple project, but open source. You can find the code for this and other apps ", tags$a(href="https://github.com/jwilliamrozelle/figuredShiny", "here"), " . Currently, this only takes xlsx forms. If you develop your forms in Excel, you can upload it directly here. If you work in kobotoolbox or ONA, you should be able to download your work as an xlsx file and do the same. At some point, I may add support for XForms in XML, but the parser for that will add a considerable level of sophistication that I just don't need or use. If that is of any interest to you, comment on my github or send me a message there."),
+      tags$p("This is a simple project, but open source. You can find the code for this and other apps ", tags$a(href="https://github.com/jwilliamrozelle/figuredServer", "here"), " . Currently, this only takes xlsx forms. If you develop your forms in Excel, you can upload it directly here. If you work in kobotoolbox or ONA, you should be able to download your work as an xlsx file and do the same. At some point, I may add support for XForms in XML, but the parser for that will add a considerable level of sophistication that I just don't need or use. If that is of any interest to you, comment on my github or send me a message there."),
       tags$h4("Known limitations"),
       tags$ul(
         tags$li("You cannot use a file with multiple languages. Currently, only the `label`column will be recognized."),
