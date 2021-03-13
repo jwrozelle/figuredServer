@@ -56,7 +56,7 @@ ui <- fluidPage(
       tags$p("Both of these issues should be infrequent, but will be addressed in future versions. Find the source code for this app under a GNU license at https://github.com/jwilliamrozelle/figuredio."),
       tags$h3("Instructions"),
       tags$ol(
-        tags$li("Upload your .xls or .xlsx odk form. For now, the survey worksheet must have columns called `label`, `type`, `name`, `relevant` and `calculation`. The choices tab must have columns labelled `list_type`, `name`, and `label`."),
+        tags$li("Upload your .xls or .xlsx odk form. For now, the survey worksheet must have columns called `label`, `type`, `name`, `relevant` and `calculation`. The choices tab must have columns labelled `list_name`, `name`, and `label`."),
         tags$li("Download the generated sample in xlsx format by clicking 'Download Codebook'.")
       )
     ),

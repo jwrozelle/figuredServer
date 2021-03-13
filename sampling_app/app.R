@@ -4,6 +4,7 @@ library(xlsx)
 library(pwr)
 library(effsize)
 library(shinythemes)
+library(DT)
 
 # Define UI for data upload app ----
 ui <- fluidPage(
@@ -11,15 +12,15 @@ ui <- fluidPage(
   tags$head(
     #tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css"),
     HTML(
-    "<!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-129297024-1'></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    
-    gtag('config', 'UA-129297024-1');
-    </script>")),
+      "<!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src='https://www.googletagmanager.com/gtag/js?id=UA-129297024-1'></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'UA-129297024-1');
+      </script>")),
   tags$a(href = "https://figured.io", tags$img(src = "https://figured.io/aux/logo1.png", width = 137, height = 50, padding = "20px")),
   tags$hr(),
   
@@ -92,7 +93,7 @@ ui <- fluidPage(
                            tags$ul(
                              tags$li("First, the code currently only samples subsequent rows in the dataset when the population of a PSU is smaller than the cluster sample size. Therefore, if a PSU is selected near the bottom of the .csv file the loop may stop prematurely. The result of this limitation would be a cluster with more USUs sampled than it actually contains."),
                              tags$li("The other limitation is that the loop is currently calculated only by counting the sum of the population from a group of PSU's until there are as many or more USUs available than the cluster size. In rare cases, this may mean that more USU's may be sampled from a PSU than it contains. For example, suppose the desired cluster size was 100. A selected PSU (Community A) contained 80 USUs and the following PSU (Community B) contained 30. The loop would recognize that between Community A and Community B, there are more than 100 USUs. It would then cheerfully divide 100 USUs by 2 PSUs, assigning half (50) of the cluster to be taken from Community A (with a 80 USUs) and 50 to be taken from Community B (thought it only contains 30).")
-                             ),
+                           ),
                            tags$p("Both of these issues should be infrequent, but will be addressed in future versions. Find the source code for this app under a GNU license at https://github.com/jwilliamrozelle/figuredio."),
                            tags$h3("Instructions"),
                            tags$ol(
@@ -106,7 +107,7 @@ ui <- fluidPage(
                                        tags$li("Sample: Containing all uploaded info with additional columns detailing the selection"),
                                        tags$li("Sample Info: Containing documentation of your inputs, the sample size and sampling interval")
                                      )
-                                     )
+                             )
                              
                            ),
                            
@@ -118,7 +119,7 @@ ui <- fluidPage(
                            tags$hr(),
                            tags$h2(textOutput("startWarn")),
                            conditionalPanel("input.num_clusters > 0",
-                           tags$h3("Meta Data about Sample Result")),
+                                            tags$h3("Meta Data about Sample Result")),
                            tags$h4(textOutput("sampIntRendered")),
                            tags$h4(textOutput("totalSample")),
                            
@@ -129,8 +130,7 @@ ui <- fluidPage(
                            
                            #Show table of resulting data
                            conditionalPanel("input.gen_random >= 1",
-                                            # tags$hr(),
-                                            dataTableOutput("contents")
+                                            DT::dataTableOutput("contents")
                            )
                          )
                        )
@@ -223,11 +223,11 @@ ui <- fluidPage(
                        #       tags$p("This particular test has not been fully developed yet, and the values it produces should not be trusted. In time, this test will be fully developed and made available.")
                        #       ),
                        #     textOutput("sample_size")
-                         # )
+                       # )
                        # )
               )
   )
-)
+    )
 
 # Define server logic to read selected file ===============================================
 server <- function(input, output, session) {
@@ -239,7 +239,7 @@ server <- function(input, output, session) {
       paste("SamplingFrameTemplate.csv")
     },
     content = function(file) {
-      file.copy("/srv/shiny-server/sampling_app/test.csv", file)
+      file.copy("test.csv", file)
     }
   )
   
@@ -303,7 +303,6 @@ server <- function(input, output, session) {
   observeEvent(input$gen_random, {
     req(input$file1)
     req(input$num_clusters)
-    # req(input$tot_sample)
     sampling_interval <- as.numeric(sampInt())
     randStartValue <- runif(1, min = 0, max = runif(1, min = 0, max = sampling_interval))
     updateNumericInput(
@@ -380,10 +379,10 @@ server <- function(input, output, session) {
   })
   
   # Render the completed data table
-  output$contents <- renderDataTable({df2()})
+  output$contents <- DT::renderDataTable({df2()})
   
   meta_data <- reactive({
-    meta.df <- read.csv("/srv/shiny-server/sampling_app/data/dataframe.csv")
+    meta.df <- read.csv("data/dataframe.csv")
     meta.df$num_clusters[1] <- input$num_clusters
     meta.df$cluster_size[1] <- input$cluster_size
     meta.df$sample_size[1] <- input$num_clusters * input$cluster_size

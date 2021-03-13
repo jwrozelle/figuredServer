@@ -1,6 +1,6 @@
 library(shiny)
 library(ggplot2)
-source("Example 1.R")
+source("Example 1.R")''
 
 # UI ========================================
 ui <- fluidPage(
