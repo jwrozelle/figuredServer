@@ -97,17 +97,23 @@ ui <- fluidPage(
 
 # Percent difference compared to 2008 weighted by total number of articles
 server <- function(input, output) {
+  
+  
+  
   output$chart <- renderPlot({
     display.plot <-
       ggplot(plat.df3, aes_string(
         y = input$analysis,
-        color = plat.df3$tool
+        color = "tool"# plat.df3$tool
       ))
     if (input$analysis == "relative_yr" | input$analysis == "diff_yr0_p") {
       display.plot <- display.plot + scale_y_continuous(name = "Percent", labels = percent)
     } else if (input$analysis != "diff_yr0_pw") {
       display.plot <- display.plot + scale_y_continuous(labels = number)
     }
+
+
+
     display.plot <-
       display.plot + theme_economist()
     display.plot <-
@@ -115,6 +121,8 @@ server <- function(input, output) {
     return(display.plot)
     }
   )
+  
+  
   
   # Y variable explanation
   output$yvar_desc <- renderText({
@@ -131,12 +139,19 @@ server <- function(input, output) {
     }
   })
   
+  
+  
   output$factor_ex <- renderText({
     if (input$analysis == "diff_yr0_pw") {
       paste0("This is a weighted trend line. It's intended to show relative change, weighted by overall articles published. The 400+% increase in articles mentioning R is not directly comparible to the decrease in SPSS because SPSS started so much higher. By weighting the trend lines by the relative number of articles published, trends are meant to be comparible.")
     } # else {paste0(" ")}
   })
+  
+  
+  
 }
+
+
 
 # run application
 shinyApp(ui, server)
