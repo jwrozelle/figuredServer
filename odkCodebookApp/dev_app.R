@@ -5,6 +5,7 @@ library(dplyr)
 library(shinythemes)
 library(stringr)
 
+
 # Define UI for data upload app ----
 ui <- fluidPage(
   theme = shinytheme("yeti"),
@@ -46,7 +47,7 @@ ui <- fluidPage(
       # Conditional formatting based 
       conditionalPanel("output.fileUploaded", # & input.tot_sample > 0",
                        downloadButton("downloadData", "Download Codebook")
-      )
+                       )
     ),
     
     # Main panel for displaying outputs ===================================================
@@ -126,7 +127,7 @@ server <- function(input, output, session) {
     req(input$file1)
     
     if(is.null(input$file1)) 
-    {return(NULL)}
+      {return(NULL)}
     
     survey   <- read.xlsx(input$file1$datapath, "survey")
     choices  <- read.xlsx(input$file1$datapath, "choices")
@@ -212,6 +213,7 @@ server <- function(input, output, session) {
          survey_labels_codebook, 
          choiceLabel.format,
          surveyLabel.format)
+      
     }
     
     # remove duplicated information from the codebook
@@ -229,7 +231,13 @@ server <- function(input, output, session) {
     
     # Remove objects no longer used
     rm(languages.v, choice_labels_format, survey_labels_format)
-
+    # else {
+    #   codebook$`Survey Text` <- ifelse(codebook$duplicated == 1 & !is.na(codebook$name.survey), NA, codebook$label.survey)
+    #   codebook$Choice        <- codebook$label.choice
+    #   
+    #   keepvars <- c("Question Type", "Variable", "Survey Text", "Calculation", "Code", "Choice", "Skip Pattern")
+    # }
+    
     # remove question type if option selected
     if (input$include_type == FALSE) {
       keepvars <- keepvars[!keepvars %in% c("Question Type")]
@@ -285,3 +293,10 @@ server <- function(input, output, session) {
 
 # Run the app ----
 shinyApp(ui, server)
+
+
+
+
+
+
+
